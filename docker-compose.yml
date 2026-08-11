@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # Development Service
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
+
+  # Test Service
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm", "test", "--", "--watchAll=false"]
+
+  # Stretched Goal: Production Service (Nginx)
+  web-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "80:80"  # Serves on default HTTP Port 80
