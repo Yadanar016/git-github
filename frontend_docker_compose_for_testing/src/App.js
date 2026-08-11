@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Welcome to React App</h1>
+        <h1>Welcome to React App Testing</h1>
         
         <div className="card">
           <p><strong>Developed by:</strong> Yadanar and Jolyn</p>
