@@ -1,0 +1,2 @@
+This is for week 12 Zoom lesson.
+React App development server is created and run (w/o container) from GitBash/Powershell.
