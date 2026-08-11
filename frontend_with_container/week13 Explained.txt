@@ -1,0 +1,14 @@
+This is for week 13 Zoom lesson.
+Dockerfile.dev for creating custom image for React App development server.
+
+Notes:
+
+1. "FROM node:16-alpine" is updated in Dockerfile.dev to solve OpenSSL problem related to React.
+
+2. The following cmd does not work for docker volume
+
+	a) docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <img ID>
+
+3. Volume can still work in docker compose (frontend_using_docker_compose)
+	
+	
