@@ -1,0 +1,2 @@
+Using a multi-steps Dockerfile to create a temp container to execute npm run build (build prod version of React App.
+Then start a contiainer to run nginx as the prod server for React App.
